@@ -1,0 +1,13 @@
+{
+  "name": "travel-pages",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "旅途拾頁：以明確 AI 協作規則持續累積的旅行筆記網站",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "test": "node --test tests/site.test.mjs"
+  }
+}
