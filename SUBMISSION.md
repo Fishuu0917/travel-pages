@@ -1,6 +1,6 @@
 # 作業繳交資料
 
-繳交前，請以自己的個人資料與成功部署後的真實連結替換以下欄位。
+專案與網站已公開。繳交前，請補上自己的個人資料，並閱讀確認以下內容。
 
 ## 繳交標題
 
@@ -14,19 +14,19 @@
 
 ## 2. GitHub Repository 連結
 
-待填：上傳成功後，貼上實際的公開 repository 連結。
+[Fishuu0917 / travel-pages](https://github.com/Fishuu0917/travel-pages)
 
 ## 3. 網頁連結
 
-待填：GitHub Pages 部署成功後，貼上可公開瀏覽的正式網址。
+[旅途拾頁公開網站](https://fishuu0917.github.io/travel-pages/)
 
 ## 4. AGENTS.md
 
-完整文件位於專案根目錄的 [AGENTS.md](AGENTS.md)。網站的「關於這本筆記」也能直接閱讀與下載。
+完整文件：[GitHub 上的 AGENTS.md](https://github.com/Fishuu0917/travel-pages/blob/main/AGENTS.md)。網站的[關於這本筆記](https://fishuu0917.github.io/travel-pages/guide.html)也能直接閱讀與下載。
 
 文件規範專案目的、技術架構、設計配色、內容語氣、檔案命名、文章資料欄位、新增流程、無障礙要求、資料驗證與部署方式。
 
-上傳後可將這裡補成 GitHub 中 AGENTS.md 的實際連結，或依課程平台要求貼上完整文件。
+可依課程平台要求貼上這份文件的連結或完整內容。
 
 ## 5. 規則如何幫助 AI 延伸專案？
 
@@ -40,8 +40,9 @@
 
 - [ ] 已填入自己的學校、學號、系級與姓名。
 - [ ] 已確認並調整內容，能解釋專案與 AGENTS.md 的設計。
-- [ ] 已上傳完整專案到自己的公開 GitHub repository。
-- [ ] 已將 GitHub Pages 的 Source 設定成 GitHub Actions。
-- [ ] Actions 建置與部署均成功。
-- [ ] 已使用正式網址測試首頁、文章與手機排版。
-- [ ] 已在上方填入 repository、網頁與 AGENTS.md 的真實連結。
+- [x] 已上傳完整專案到公開 GitHub repository。
+- [x] 已將 GitHub Pages 的 Source 設定成 GitHub Actions。
+- [x] Actions 建置與部署均成功。
+- [x] 正式首頁、六篇文章、收藏與說明頁、資產、規則及模板皆回傳 HTTP 200，內容與本機建置一致。
+- [ ] 由使用者在桌機與手機檢查排版、搜尋、收藏與清單互動；本次瀏覽器控制受限，未完成畫面與互動驗證。
+- [x] 已在上方填入 repository、網頁與 AGENTS.md 的真實連結。

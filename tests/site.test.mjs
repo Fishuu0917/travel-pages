@@ -71,3 +71,25 @@ test('規則與模板可透過網站直接取得',async()=>{
   assert.equal(await readFile(path.join(output,'AGENTS.md'),'utf8'),await readFile(path.join(root,'AGENTS.md'),'utf8'));
   assert.deepEqual(JSON.parse(await readFile(path.join(output,'templates/note.example.json'),'utf8')),JSON.parse(await readFile(path.join(root,'templates/note.example.json'),'utf8')));
 });
+
+test('依模板新增第七篇內容即可產生新頁、首頁卡片與搜尋資料',async()=>{
+  const sample=JSON.parse(await readFile(path.join(root,'templates/note.example.json'),'utf8'));
+  Object.assign(sample,{
+    slug:'rainy-day-plan',title:'雨天旅行的備案筆記',
+    summary:'替下雨的一天留一個可以調整的備案，練習記錄當下的選擇，再整理成下一次旅行可以參考的筆記。',
+    intro:'編輯示範｜先選一件最想保留的事，再依天氣與自己的狀態調整。',
+    tags:['天氣備案','行程留白']
+  });
+  const extended=[...structuredClone(notes),sample];
+  extended.find(n=>n.slug==='packing-light').related.push(sample.slug);
+  const extensionOutput=path.join(root,'outputs/extension-check');
+  await build(extensionOutput,extended);
+  const home=await readFile(path.join(extensionOutput,'index.html'),'utf8');
+  const page=await readFile(path.join(extensionOutput,'notes/rainy-day-plan.html'),'utf8');
+  const guide=await readFile(path.join(extensionOutput,'guide.html'),'utf8');
+  assert.ok(home.includes('href="./notes/rainy-day-plan.html"'));
+  assert.ok(home.includes('data-slug="rainy-day-plan" data-category="行前準備" data-search="雨天旅行的備案筆記'));
+  assert.ok(page.includes('data-exercise="rainy-day-plan"'));
+  assert.ok(guide.includes(`目前的 ${extended.length} 篇文章`));
+  assert.equal((await htmlFiles(extensionOutput)).length,extended.length+3);
+});
