@@ -18,7 +18,6 @@
 - `tests/site.test.mjs`：內容與連結的回歸檢查。
 - `dist/`：自動產生的網站。禁止直接修改；一律修改來源再重建。
 - `.github/workflows/pages.yml`：檢查、建置、部署 GitHub Pages。
-- `SUBMISSION.md`：可編輯的作業繳交說明；個資必須由使用者填寫。
 
 ## 3. 視覺與文字規則
 
@@ -77,4 +76,4 @@
 
 ## 7. GitHub 與部署
 
-提交來源、模板、規則、測試與 workflow。`dist/`、`node_modules/`、暫存檔與本機設定不提交。Pages 使用 GitHub Actions 部署，在 main 分支推送時先檢查再產生 `dist/`。只有確認部署成功並可讀取正式網址後，才在繳交說明填入網頁連結；不得捏造已上線狀態。
+提交來源、模板、規則、測試與 workflow。`dist/`、`node_modules/`、暫存檔與本機設定不提交。作業繳交草稿 `SUBMISSION.md` 僅保留於本機並列入 `.gitignore`，不得提交至 repository。Pages 使用 GitHub Actions 部署，在 main 分支推送時先檢查再產生 `dist/`。只有確認部署成功並可讀取正式網址後，才在繳交說明填入網頁連結；不得捏造已上線狀態。

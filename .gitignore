@@ -5,3 +5,4 @@ outputs/
 *.log
 .DS_Store
 .sites-runtime/
+SUBMISSION.md
